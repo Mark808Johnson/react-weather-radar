@@ -1,0 +1,6 @@
+.city-forecast {
+    display: flex;
+    justify-content: center;
+    max-width: 1600%;
+}
+ 

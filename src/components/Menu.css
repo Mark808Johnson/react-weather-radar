@@ -1,0 +1,26 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.menu select {
+  width: 80%;
+  font-size: 13pt;
+  color: #262626;
+}
+
+.menu-container .dropdown-menu {
+  border: 1px solid grey; 
+  padding: 10px; 
+}
+
+.menu-container .dropdown-menu .dropdown-item {
+  height: 40px; 
+  line-height: 40px; 
+}

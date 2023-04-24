@@ -1,0 +1,83 @@
+.city-weather-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 61%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.city-weather-container .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.city-weather-container .left-column .top-corner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.city-weather-container .left-column .bottom-corner {
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.city-weather-container .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.city-weather-container .right-column .icon-temperature-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.city-weather-container .right-column .wind-humidity-precipitation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.city-weather-container .city {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.city-weather-container .description {
+  font-size: 18px;
+  margin: 0;
+}
+
+.city-weather-container .date {
+  font-size: 14px;
+  margin: 0;
+}
+
+.city-weather-container .icon {
+  height: 80px;
+  width: 80px;
+}
+
+.city-weather-container .temperature {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+
+
+.city-weather-container .wind-humidity-precipitation {
+  font-size: 14px;
+  margin: 0;
+  text-align: right;
+}
