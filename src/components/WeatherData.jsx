@@ -1,16 +1,21 @@
 import React from 'react';
+import CityWeather from './CityWeather'
+import CityForecast from './CityForecast'
+import './WeatherData.css'
 
 function WeatherData(props) {
-  const { city, data } = props;
-
+  const { data } = props;
+  
   return (
     <div className="weather-data">
-      <h2>{city.name}</h2>
-      <p>Temperature: {data.main.temp}°C</p>
-      <p>Humidity: {data.main.humidity}%</p>
-      <p>Wind Speed: {data.wind.speed}m/s</p>
+      {data.map((city, index) => (
+        <div key={index}>
+          <CityWeather weatherData={city.weatherData}/>
+          <CityForecast forecast={city.forecastData}/>
+        </div>
+      ))}
     </div>
-  );
+  )
 }
 
 export default WeatherData;

@@ -7,50 +7,67 @@ import WeatherData from './WeatherData'
 
 function WeatherRadar() {
 
-  const [selectedCity, setSelectedCity] = useState(null);
-  const [weatherData, setWeatherData] = useState(null);
-  const apiKey = process.env.WEATHER_RADAR_API_KEY;
-  const apiUrl = process.env.WEATHER_RADAR_API_URL;
+  const [selectedCity, setSelectedCity] = useState(null)
+  const [responseData, setResponseData] = useState(null);
+  
+  const [loading, setLoading] = useState(true);
+  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleCitySelect = (city) => {
     setSelectedCity(city);
   };
 
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      if (selectedCity === "all") {
+        const promises = cities.map(async (city) => {
+          const { lat, lon } = city;
+          const weatherResponse = await axios.get(`${apiUrl}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
+          const forecastResponse = await axios.get(`${apiUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&units=metric&appid=${apiKey}`)
+          const [weatherData, forecastData] = await Promise.all([weatherResponse, forecastResponse])
+          return {name: city.name, weatherData: weatherData.data, forecaseData: forecastData.data}
+        });
+
+        const data = await Promise.all(promises);
+        setResponseData(data)
+      } 
+      
+      else 
+      {
+        const { lat, lon } = selectedCity;
+        const weatherResponse = await axios.get(`${apiUrl}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
+        const forecastResponse = await axios.get(`${apiUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&units=metric&appid=${apiKey}`)
+        setResponseData([{ name: selectedCity.name, weatherData: weatherResponse.data, forecastData: forecastResponse.data }]);
+      }
+      setLoading(false);
+    } 
+    
+    catch (error) {
+      console.error(error);
+      setLoading(false)
+    }
+  }
+    
   useEffect(() => {
     if (selectedCity) {
-      const {name, lat, lon} = selectedCity;
-      const fetchWeatherData = async () => {
-        try {
-          const response = await axios.get(apiUrl, {
-            params: {
-              q: name, 
-              lat: lat,
-              lon: lon,
-              appid: apiKey,
-              units: "metric",
-            },
-          })
-          setWeatherData(response.data);
-      } catch (error) {
-        console.error(error)
-      }
-    };
-
-    fetchWeatherData();
+      setLoading(true);
+      fetchData();
     }
-  }, [selectedCity, apiKey]);
-
+  }, [selectedCity]);
+  
   return (
     <div className="weather-radar">
         <div className="menu-container">
             <Menu cities={cities} onCitySelect={handleCitySelect} />
         </div>
-        {weatherData && (
-          <WeatherData city={selectedCity} data={weatherData}/>
-        
+          {responseData && (
+            <WeatherData data={responseData}/>
         )}
     </div>
   )
 }
+
 
 export default WeatherRadar;
