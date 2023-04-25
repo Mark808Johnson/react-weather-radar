@@ -3,7 +3,7 @@ import './ForecastTimestamp.css'
 function ForecastTimestamp({timestamp}) {
 
     const apiUrl = process.env.REACT_APP_API_URL;
-    
+    console.log(timestamp)
     const time = timestamp.dt_txt.slice(11, 16)
     const iconCode = timestamp.weather[0].icon
     const icon = `${apiUrl}/img/w/${iconCode}.png`

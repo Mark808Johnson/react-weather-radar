@@ -6,9 +6,7 @@ function CityForecast({forecast}) {
     return (
         <div className="city-forecast-container">
             {forecast.list.map((timestamp, index) => (
-                <div key={index}>
-                    <ForecastTimestamp timestamp={timestamp}/>
-                </div>
+                <ForecastTimestamp key={index} timestamp={timestamp}/>
             ))} 
         </div>
     )

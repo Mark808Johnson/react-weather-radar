@@ -4,7 +4,7 @@ import moment from 'moment';
 function CityWeather({weatherData}) {
 
     const apiUrl = process.env.REACT_APP_API_URL;
-    
+    console.log(weatherData)
     const city = weatherData.name;
     const description = weatherData.weather[0].description;
     
@@ -19,8 +19,16 @@ function CityWeather({weatherData}) {
     
     const windSpeed = weatherData.wind.speed;
     const humidity = weatherData.main.humidity;
-    const precipitation = weatherData.main.humidity;
     
+    let precipitation;
+    if ("rain" in weatherData) {
+        precipitation = weatherData.rain['3h']
+    }
+
+    else {
+        precipitation = 0;
+    }
+        
     return (
         <div className="city-weather-container">
             <div className="left-column">
