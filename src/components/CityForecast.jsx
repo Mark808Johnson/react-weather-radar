@@ -3,14 +3,10 @@ import './CityForecast.css'
 
 function CityForecast({forecast}) {
 
-    console.log(forecast.list)
-
     return (
-        <div className="city-forecast">
+        <div className="city-forecast-container">
             {forecast.list.map((timestamp, index) => (
-                <div key={index}>
-                    <ForecastTimestamp timestamp={timestamp}/>
-                </div>
+                <ForecastTimestamp key={index} timestamp={timestamp}/>
             ))} 
         </div>
     )

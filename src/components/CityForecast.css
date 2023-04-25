@@ -1,6 +1,10 @@
-.city-forecast {
+.city-forecast-container {
+    
+    min-width: 85%;
     display: flex;
-    justify-content: center;
-    max-width: 1600%;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
 }
  

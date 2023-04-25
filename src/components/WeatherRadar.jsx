@@ -27,12 +27,18 @@ function WeatherRadar() {
           const weatherResponse = await axios.get(`${apiUrl}/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
           const forecastResponse = await axios.get(`${apiUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&units=metric&appid=${apiKey}`)
           const [weatherData, forecastData] = await Promise.all([weatherResponse, forecastResponse])
-          return {name: city.name, weatherData: weatherData.data, forecaseData: forecastData.data}
+          return {name: city.name, weatherData: weatherData.data, forecastData: forecastData.data}
         });
 
         const data = await Promise.all(promises);
         setResponseData(data)
       } 
+      
+      else if (selectedCity === "none") 
+      {
+        setResponseData(null);
+        setSelectedCity(null);
+      }
       
       else 
       {
@@ -59,15 +65,12 @@ function WeatherRadar() {
   
   return (
     <div className="weather-radar">
-        <div className="menu-container">
-            <Menu cities={cities} onCitySelect={handleCitySelect} />
-        </div>
-          {responseData && (
-            <WeatherData data={responseData}/>
+        <Menu cities={cities} onCitySelect={handleCitySelect} />
+        {responseData && (
+        <WeatherData data={responseData}/>
         )}
     </div>
   )
 }
-
 
 export default WeatherRadar;
