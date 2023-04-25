@@ -59,11 +59,9 @@ function WeatherRadar() {
   
   return (
     <div className="weather-radar">
-        <div className="menu-container">
-            <Menu cities={cities} onCitySelect={handleCitySelect} />
-        </div>
-          {responseData && (
-            <WeatherData data={responseData}/>
+        <Menu cities={cities} onCitySelect={handleCitySelect} />
+        {responseData && (
+        <WeatherData data={responseData}/>
         )}
     </div>
   )

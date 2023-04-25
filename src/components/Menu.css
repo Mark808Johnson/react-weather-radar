@@ -3,16 +3,16 @@
   justify-content: center;
   max-width: 80%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 20px; 
   padding-bottom: 20px;
   height: 40px;
-  border-radius: 10px;
 }
 
 .menu select {
   width: 80%;
   font-size: 13pt;
   color: #262626;
+  text-align: center;
 }
 
 .menu-container .dropdown-menu {
