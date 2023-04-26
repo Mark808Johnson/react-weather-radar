@@ -1,16 +1,16 @@
-import cities from './../cities'
+import cities from '../../data/cities'
 import { useState, useEffect } from 'react'
-import Menu from './Menu'
+import Menu from './../Menu/Menu'
 import axios from 'axios'
 import './WeatherRadar.css' 
-import WeatherData from './WeatherData'
+import WeatherData from '../WeatherData/WeatherData'
 
 function WeatherRadar() {
 
   const [selectedCity, setSelectedCity] = useState(null)
   const [responseData, setResponseData] = useState(null);
-  
   const [loading, setLoading] = useState(true);
+  
   const apiKey = process.env.REACT_APP_API_KEY;
   const apiUrl = process.env.REACT_APP_API_URL;
 

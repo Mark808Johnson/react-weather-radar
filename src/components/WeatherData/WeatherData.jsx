@@ -1,6 +1,6 @@
 import React from 'react';
-import CityWeather from './CityWeather'
-import CityForecast from './CityForecast'
+import CityWeather from './../CityWeather/CityWeather'
+import CityForecast from './../CityForecast/CityForecast'
 import './WeatherData.css'
 
 function WeatherData({data}) {

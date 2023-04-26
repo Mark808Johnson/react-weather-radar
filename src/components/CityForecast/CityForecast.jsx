@@ -1,4 +1,4 @@
-import ForecastTimestamp from './ForecastTimestamp.jsx';
+import ForecastTimestamp from './../ForecastTimestamp/ForecastTimestamp';
 import './CityForecast.css'
 
 function CityForecast({forecast}) {

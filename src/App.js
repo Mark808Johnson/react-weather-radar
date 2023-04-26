@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/Header'
-import WeatherRadar from './components/WeatherRadar';
+import Header from './components/Header/Header'
+import WeatherRadar from './components/WeatherRadar/WeatherRadar';
 
 function App() {
   
