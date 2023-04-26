@@ -3,11 +3,9 @@ import "./Header.css"
 function Header() {
   
   return (
-    <div className="container">
-      <div className="header">
+    <div className="header">
         Säätutka
-      </div> 
-    </div>
+    </div> 
   );
 }
 

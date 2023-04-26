@@ -14,17 +14,17 @@ const Menu = (props) => {
 
     else
     {
-      selectedCity = props.cities.find(city => city.name == selectedValue);
+      selectedCity = props.cities.find(city => city.name === selectedValue);
     }
 
     props.onCitySelect(selectedCity)
   }
 
   const options = [
-    <option key="none" value="none">-</option>,
-    <option key="all" value="all">All Cities</option>,
+    <option className="option" key="none" value="none">-</option>,
+    <option className="option" key="all" value="all">All Cities</option>,
     ...props.cities.map((city) => (
-    <option key={city.name} value={city.name}>{city.name}</option>
+    <option className="option" key={city.name} value={city.name}>{city.name}</option>
     ))
   ];
 

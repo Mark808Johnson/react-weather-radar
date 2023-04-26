@@ -9,7 +9,7 @@ function WeatherData({data}) {
     <div className="weather-data">
       {data.map((city, index) => (
           <>
-          <CityWeather key={"cityWeather" + index} weatherData={city.weatherData}/>,
+          <CityWeather key={"cityWeather" + index} weatherData={city.weatherData}/>
           <CityForecast key={"cityForecast" + index} forecast={city.forecastData}/>
           </>
       ))}

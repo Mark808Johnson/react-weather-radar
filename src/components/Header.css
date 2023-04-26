@@ -1,15 +1,13 @@
-.container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100px; 
-    background-color: #FFFFFF
-  }
-  
 .header {
     font-size: 23pt;
     color: #262626;
-    height: 50px;
-    padding-top: 20px
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 60px; 
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
 }
  
