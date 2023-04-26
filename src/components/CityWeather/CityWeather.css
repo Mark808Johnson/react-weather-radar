@@ -1,0 +1,83 @@
+.city-weather-container {
+display: flex;
+justify-content: space-between;
+width: 75%;
+padding: 20px;
+background-color: #FFFFFF;
+}
+
+.left-column {
+display: flex;
+flex-direction: column; 
+justify-content: space-between;
+}
+
+.city {
+font-size: 19px;
+color: #262626;
+font-weight: bold;
+margin: 0;
+}
+
+.description {
+color: #70757A;
+font-size: 13px;
+margin: 0;
+}
+
+.date-time-container {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: flex-start;
+}
+
+
+.right-column {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-content: space-between;
+}
+
+.icon-temperature-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.wind-humidity-precipitation-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+
+.date {
+font-size: 15px;
+color: #262626;
+font-weight: bold;
+margin: 0
+}
+
+.time {
+font-size: 13px;
+color: #70757A;
+margin: 0
+}
+
+.city-weather-container .icon {
+height: 60px;
+width: 60px;
+}
+
+.city-weather-container .temperature {
+font-size: 26px;
+}
+
+.wind-humidity-precipitation {
+font-size: 13px;
+color: #70757A;
+margin: 0;
+text-align: right;
+}
