@@ -6,10 +6,11 @@
     justify-content: center; 
     align-items: center; 
     height: 40px; 
-    border: 1px solid #E6E6E6;
+    border-bottom: 0.1px solid #E6E6E6;
     background-color: #FFFFFF;
     position: sticky;
-    top: 0;
-    z-index: 1;
+    top: 24px;
+    z-index: 2;
+
 }
  

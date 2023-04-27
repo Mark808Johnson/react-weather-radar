@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    z-index: 2;
+    position: sticky;
+    z-index: 1;
 }
