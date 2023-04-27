@@ -1,19 +1,18 @@
 import "./Menu.css"
 
 const Menu = (props) => {
-  
+
   const handleCitySelect = (event) => {
     const selectedValue = event.target.value;
     let selectedCity = null;
-    if (selectedValue === "all"){
-       selectedCity = "all";
-    }    
+    if (selectedValue === "all") {
+      selectedCity = "all";
+    }
     else if (selectedValue === "none") {
       selectedCity = "none";
     }
 
-    else
-    {
+    else {
       selectedCity = props.cities.find(city => city.name === selectedValue);
     }
 
@@ -24,7 +23,7 @@ const Menu = (props) => {
     <option className="option" key="none" value="none">-</option>,
     <option className="option" key="all" value="all">All Cities</option>,
     ...props.cities.map((city) => (
-    <option className="option" key={city.name} value={city.name}>{city.name}</option>
+      <option className="option" key={city.name} value={city.name}>{city.name}</option>
     ))
   ];
 
