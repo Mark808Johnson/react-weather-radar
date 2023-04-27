@@ -7,8 +7,8 @@
   padding-bottom: 20px;
   height: 40px;
   position: sticky;
-  top: 60px;
-  z-index: 1;
+  top: 39px;
+  z-index: 1;  
 }
 
 .menu select {
@@ -17,10 +17,9 @@
   color: #262626;
   border: 1px solid #E6E6E6;
   border-radius: 5px;
-  cursor: pointer;
 }
 
-.option {
+option {
   text-align: center;
   font-weight: bold;
 }
