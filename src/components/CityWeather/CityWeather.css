@@ -74,6 +74,7 @@ width: 60px;
 
 .city-weather-container .temperature {
 font-size: 26px;
+color: #262626;
 }
 
 .wind-humidity-precipitation {
