@@ -5,9 +5,12 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 60px; 
+    height: 40px; 
+    border-bottom: 0.1px solid #E6E6E6;
     background-color: #FFFFFF;
     position: sticky;
-    top: 0;
+    top: 24px;
+    z-index: 2;
+
 }
  

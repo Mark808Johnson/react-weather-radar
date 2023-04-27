@@ -4,6 +4,8 @@ justify-content: space-between;
 width: 75%;
 padding: 20px;
 background-color: #FFFFFF;
+border: 1px solid #E6E6E6;
+border-radius: 5px;
 }
 
 .left-column {
@@ -73,6 +75,7 @@ width: 60px;
 
 .city-weather-container .temperature {
 font-size: 26px;
+color: #262626;
 }
 
 .wind-humidity-precipitation {

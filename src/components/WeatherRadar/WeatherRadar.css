@@ -1,7 +1,25 @@
 .weather-radar {
     background-color: #F8F9FA;
+    padding-bottom: 10px;
   }
 
-  
-  
-  
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.75s ease-in forwards;
+  animation-duration: '1s';
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

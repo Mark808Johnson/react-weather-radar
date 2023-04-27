@@ -1,13 +1,13 @@
 .menu {
   display: flex;
   justify-content: center;
-  width: 85%;
+  width: 86%;
   margin: 0 auto;
   padding-top: 20px; 
   padding-bottom: 20px;
   height: 40px;
   position: sticky;
-  top: 60px;
+  top: 64px;
   z-index: 1;
 }
 
@@ -15,12 +15,11 @@
   width: 100%;
   font-size: 13pt;
   color: #262626;
-  border: 1px solid #E6E6E6;
+  border: 0.1px solid #E6E6E6;
   border-radius: 5px;
-  cursor: pointer;
 }
 
-.option {
+option {
   text-align: center;
   font-weight: bold;
 }
