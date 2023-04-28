@@ -1,11 +1,11 @@
 ### `React Weather application`
-Simple app written in ReactJS that returns information to the user about current and forecast weather in four locations in Finland:
+Simple mobile app written in ReactJS that returns information to the user about current and forecast weather in four locations in Finland:
 - Jyväskylä
 - Tampere
 - Espoo
 - Kuopio
 
-The app uses the Open Weather Map API to retrieve data. In order to access the API, a key is required that can be obtained by signing up (free-of-charge). Details can be found at: 
+The app uses the Open Weather Map API to retrieve data. In order to access the API, a key is required that can be obtained by signing up to the service (free-of-charge). Details can be found at: 
 
 https://home.openweathermap.org/users/sign_up 
 
