@@ -1,133 +1,84 @@
 .status-bar {
-    font-size: 10pt;
-    color: #262626;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 24px;
-    border-bottom: 0.1px solid #E6E6E6;
-    background-color: #00A5E5;
-    position: sticky;
-    top: 0;
-    z-index: 3;
+  font-size: 10pt;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  border-bottom: 0.1px solid #E6E6E6;
+  background-color: #00A5E5;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .status-bar .left-hand-column {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .network {
-    font-size: 10px;
-    font-weight: 100;
-    color: white;
-    margin-left: 2px;
-    margin-right: 2px;
+  font-size: 10px;
+  font-weight: 100;
+  color: white;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
+.wifi-icon {
+  color: white;
+  margin: 7px;
+  height: 9px;
+}
+
+
 .signal {
-    display: flex;
-    align-items: center;
-    margin: 5px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
 
 .signal .circle {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: white;
-    margin-right: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 2px;
 }
 
-.wifi {
-    display: inline-block;
-    width: 20px;
-    height: 50px;
-    position: relative;
-  }
-  
-  .wifi:before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 10px;
-    height: 20px;
-    border: 4px double transparent;
-    border-top-color: currentColor;
-    border-radius: 50%;
-    top: 30px;
-    left: 5px;
-  }
-  
-  .wifi:after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 10px;
-    height: 35px;
-    border: 4px double transparent;
-    border-top-color: currentColor;
-    border-radius: 50%;
-    top: 15px;
-    left: 5px;
-  }
-  
-  .wifi .bar {
-    position: absolute;
-    bottom: 0;
-    width: 10px;
-    height: 15px;
-    border: 4px double transparent;
-    border-top-color: currentColor;
-    border-radius: 50%;
-  }
-  
-  .wifi .bar:first-child {
-    left: 5px;
-  }
-  
-  .wifi .bar:last-child {
-    right: 5px;
-  }
-  
-  .wifi .bar:nth-child(2) {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-   
 .status-bar .right-hand-column {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 5px;
-    width: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 5px;
+  width: 60px;
 }
 
 .status-bar .right-hand-column .time {
-    font-size: 10px;
-    color: white
+  font-size: 10px;
+  color: white
 }
 
 .battery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .battery-body {
-    height: 6px;
-    width: 18px;
-    border: 0.5px solid #00A5E5;
-    background-color: white;
+  height: 6px;
+  width: 18px;
+  border: 0.5px solid #00A5E5;
+  background-color: white;
 }
 
 .battery-tip {
-    height: 3px;
-    width: 2px;
-    border: 0.5 solid #00A5E5;
-    background-color: white;
+  height: 3px;
+  width: 2px;
+  border: 0.5 solid #00A5E5;
+  background-color: white;
 }

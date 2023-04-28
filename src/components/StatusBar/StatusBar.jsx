@@ -1,6 +1,7 @@
 import React from 'react';
 import './StatusBar.css';
-// import WifiIcon from '@material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWifi } from '@fortawesome/free-solid-svg-icons'
 
 function StatusBar() {
 
@@ -13,7 +14,7 @@ function StatusBar() {
     <div className="status-bar">
       <div className="left-hand-column">
         <div className="network">Telia</div>
-        {/* <WifiIcon /> */}
+        <FontAwesomeIcon icon={faWifi} className="wifi-icon" />
         <div className="signal">
           <div className="circle"></div>
           <div className="circle"></div>
