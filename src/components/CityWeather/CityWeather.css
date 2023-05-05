@@ -1,8 +1,7 @@
 .city-weather-container {
     display: flex;
     justify-content: space-between;
-    width: 75%;
-    padding: 20px;
+    padding: 5%;
     padding-top: 5px;
     height: 130px;
     background-color: #FFFFFF;
@@ -48,9 +47,8 @@
 
 .icon-temperature-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-left: 35px;
 }
 
 .wind-humidity-precipitation-container {

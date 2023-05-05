@@ -5,3 +5,7 @@
     position: sticky;
     z-index: 1;
 }
+
+.city {
+    width: 85%;
+}
