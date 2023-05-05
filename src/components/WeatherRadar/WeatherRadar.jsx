@@ -18,10 +18,11 @@ function WeatherRadar() {
           handleApiResponse(data);
           setLoading(false);
         }, 100);
-      }, []);
+      });
     }
-  }, [selectedCity]);
-
+  }
+  , [selectedCity, handleApiResponse]);
+  
   return (
 
     <div className="weather-radar">

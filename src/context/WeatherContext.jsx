@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useCallback } from 'react'
 
 export const WeatherContext = createContext("")
 
@@ -6,9 +6,9 @@ const WeatherProvider = ({ children }) => {
     const [weatherDataResponse, setWeatherDataResponse] = useState(null)
     const [selectedCity, setSelectedCity] = useState(null);
         
-    const handleApiResponse = (data) => {
+    const handleApiResponse = useCallback((data) => {
         setWeatherDataResponse(data)
-    }
+    }, [])
 
     const handleCitySelect = (city) => {
         setSelectedCity(city);
