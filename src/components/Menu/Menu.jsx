@@ -1,8 +1,14 @@
+import { useContext} from 'react';
+import { WeatherContext } from "../../context/WeatherContext";
 import "./Menu.css"
+import cities from "../../data/cities";
 
-const Menu = (props) => {
+const Menu = () => {
 
-  const handleCitySelect = (event) => {
+  const { handleCitySelect } = useContext(WeatherContext)
+
+  const onCitySelect = (event) => {
+    
     const selectedValue = event.target.value;
     let selectedCity = null;
     if (selectedValue === "all") {
@@ -13,23 +19,23 @@ const Menu = (props) => {
     }
 
     else {
-      selectedCity = props.cities.find(city => city.name === selectedValue);
+      selectedCity = cities.find(city => city.name === selectedValue);
     }
-
-    props.onCitySelect(selectedCity)
+    
+    handleCitySelect(selectedCity)
   }
 
   const options = [
     <option className="option" key="none" value="none">-</option>,
     <option className="option" key="all" value="all">All Cities</option>,
-    ...props.cities.map((city) => (
+    ...cities.map((city) => (
       <option className="option" key={city.name} value={city.name}>{city.name}</option>
     ))
   ];
 
   return (
     <div className="menu">
-      <select onChange={handleCitySelect}>
+      <select onChange={onCitySelect}>
         {options}
       </select>
     </div>
