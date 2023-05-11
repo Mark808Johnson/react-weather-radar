@@ -17,6 +17,17 @@ Add the following fields plus your secret key:
 
 ![Screenshot 2023-04-27 182059](https://user-images.githubusercontent.com/62894074/234909214-760eca20-ae51-43db-a759-46e350f2b20c.png)
 
+<u> Steps for running app: </u>
+
+### `npm install`
+
+Installs packages that app depends on.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
 ### `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -24,7 +35,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
