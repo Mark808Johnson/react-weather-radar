@@ -1,16 +1,16 @@
 .header {
     font-size: 23pt;
-    color: #262626;
-    padding: 10px;
-    display: flex;
+    color: #0b07ee;
+    padding-bottom: 15px;
+    padding-top: 15px;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
     height: 40px; 
+    width: 100%;
     border-bottom: 0.1px solid #E6E6E6;
     background-color: #FFFFFF;
-    position: sticky;
-    top: 24px;
-    z-index: 2;
-
+    position: fixed;
+    z-index: 3;
+    text-align: center;
 }
  

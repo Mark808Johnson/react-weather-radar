@@ -4,7 +4,7 @@ function Header() {
   
   return (
     <div className="header">
-        Säätutka
+        Johnson family weather!
     </div> 
   );
 }
